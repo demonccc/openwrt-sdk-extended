@@ -1,0 +1,23 @@
+name: Validate SDK extension tooling
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install YAML reader
+        run: python3 -m pip install --disable-pip-version-check PyYAML
+      - name: Check Python syntax
+        run: python3 -m py_compile scripts/*.py
+      - name: Validate profiles
+        run: |
+          python3 scripts/profiles.py validate
+          python3 scripts/profiles.py matrix | python3 -m json.tool > /dev/null
+      - name: Test manifest validation
+        run: python3 -m unittest discover -s tests -p 'test_*.py'

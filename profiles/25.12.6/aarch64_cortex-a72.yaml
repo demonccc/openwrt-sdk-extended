@@ -1,0 +1,4 @@
+release: "25.12.6"
+arch: aarch64_cortex-a72
+targets:
+  - bcm27xx/bcm2711
