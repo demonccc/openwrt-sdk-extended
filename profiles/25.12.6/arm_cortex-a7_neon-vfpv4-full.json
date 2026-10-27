@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "release": "25.12.6",
+  "arch": "arm_cortex-a7_neon-vfpv4",
+  "variant": "full",
+  "targets": [
+    "ipq40xx/generic",
+    "bcm27xx/bcm2709"
+  ],
+  "components": [
+    "rust",
+    "glib2",
+    "dbus",
+    "openssl"
+  ]
+}
