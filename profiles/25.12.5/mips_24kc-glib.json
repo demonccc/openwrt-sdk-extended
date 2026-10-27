@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "release": "25.12.5",
+  "arch": "mips_24kc",
+  "variant": "glib",
+  "targets": [
+    "ath79/generic"
+  ],
+  "components": [
+    "glib2",
+    "dbus"
+  ]
+}
