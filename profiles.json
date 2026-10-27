@@ -1,35 +1,4 @@
 {
   "schema": 1,
-  "profiles": {
-    "ath79-generic-25.12.5": {
-      "release": "25.12.5",
-      "target": "ath79",
-      "subtarget": "generic",
-      "arch": "mips_24kc"
-    },
-    "ipq40xx-generic-25.12.5": {
-      "release": "25.12.5",
-      "target": "ipq40xx",
-      "subtarget": "generic",
-      "arch": "arm_cortex-a7_neon-vfpv4"
-    },
-    "bcm27xx-bcm2709-25.12.5": {
-      "release": "25.12.5",
-      "target": "bcm27xx",
-      "subtarget": "bcm2709",
-      "arch": "arm_cortex-a7_neon-vfpv4"
-    },
-    "bcm27xx-bcm2711-25.12.5": {
-      "release": "25.12.5",
-      "target": "bcm27xx",
-      "subtarget": "bcm2711",
-      "arch": "aarch64_cortex-a72"
-    },
-    "x86-64-25.12.5": {
-      "release": "25.12.5",
-      "target": "x86",
-      "subtarget": "64",
-      "arch": "x86_64"
-    }
-  }
+  "description": "Profiles are in profiles/<release>/<arch>-<variant>.json; this file is retained only as a migration pointer."
 }
