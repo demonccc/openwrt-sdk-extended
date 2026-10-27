@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "release": "25.12.6",
+  "arch": "x86_64",
+  "variant": "glib",
+  "targets": [
+    "x86/64"
+  ],
+  "components": [
+    "glib2",
+    "dbus"
+  ]
+}
