@@ -2,6 +2,7 @@
 """Discover and validate versioned SDK extension profiles."""
 import argparse
 import json
+import yaml
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -10,8 +11,8 @@ VARIANTS = {"full", "rust", "glib"}
 
 def discover():
     profiles = {}
-    for path in sorted((ROOT / "profiles").glob("*/*.json")):
-        item = json.loads(path.read_text())
+    for path in sorted((ROOT / "profiles").glob("*/*.yaml")):
+        item = yaml.safe_load(path.read_text())
         name = path.relative_to(ROOT / "profiles").with_suffix("").as_posix()
         release, stem = name.split("/", 1)
         assert item["schema"] == 1 and item["release"] == release, path
