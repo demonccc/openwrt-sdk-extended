@@ -1,0 +1,4 @@
+release: "25.12.6"
+arch: mips_24kc
+targets:
+  - ath79/generic
