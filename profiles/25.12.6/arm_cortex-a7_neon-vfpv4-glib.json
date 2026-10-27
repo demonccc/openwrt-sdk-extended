@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "release": "25.12.6",
+  "arch": "arm_cortex-a7_neon-vfpv4",
+  "variant": "glib",
+  "targets": [
+    "ipq40xx/generic",
+    "bcm27xx/bcm2709"
+  ],
+  "components": [
+    "glib2",
+    "dbus"
+  ]
+}
